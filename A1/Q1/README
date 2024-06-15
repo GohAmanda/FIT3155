@@ -1,1 +1,4 @@
-
+output_q1.txt: the output of my code will be outputted in a txt file
+pattern.txt: input pattern that we want to look for in the text
+text.txt: input text that we want to find the pattern from 
+q1.py: my solutions to solve question 1

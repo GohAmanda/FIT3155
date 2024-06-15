@@ -1,1 +1,18 @@
+string.txt: 
+contents define the input string str[1 . . . n]. It is safe to assume the following about this input file:
+- It will contain only a single line of ASCII characters defining the string.
+- All characters are in the ASCII range [36, 126]
+- The string contained in the input file will always terminate with the unique character $ (ASCII 36).
 
+pos.txt:
+containing a list of positions {i1, i2, . . . , im} in the following format:
+This file will contain m lines, and each line gives a position of some suffix specified in 1-based indexing. (See example below.)
+It is safe to assume the following about this input file:
+– The list of positions are non-redundant – meaning all positions in the input file are distinct (without repeats).
+– Each listed position is in the range [1, n].
+
+q1.py: My solution codes for question 1
+
+output_q1.py: The output file in the same format as the input <positionsFileName>,
+except that each line in the output file contains the lexicographic rank of the corre-
+sponding suffix among the list of all suffixes.

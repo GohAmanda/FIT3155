@@ -1,0 +1,37 @@
+Question 1: A simple coding exercise with a result that should make you think [5 marks]
+
+This question is a pretty straightforward implementational exercise that any undergrad computer science student will be able to complete. But understanding the pattern of behaviour of the result/output from this exercise is something that will expand your learning. Rest assured, the ‘thinking’ part is not being assessed; only the implementation and its correctness will be assessed. Yet important you think about the pattern that emerges from your implementation and attempt to link it with something you have learnt in this unit.
+
+Your program takes two arguments as input:
+
+the size of a (small) alphabet (|A|). For practicality during testing, restrict |A| within the range [1, 5]. Assume the characters in the alphabet start from the letter ‘a’ onwards. That is, if |A| = 4, the alphabet A becomes: {‘a’,‘b’,‘c’,‘d’}.
+
+the length of the string, N. For practicality during testing, restrict N within the range [1, 10]. Using the two input parameters |A| and N write a program that can generate all possible strings of length N from the alphabet A, and for each string, find the number of distinct cyclic rotations that are possible for that string. (See two examples given on the next page to understand what this means.) Note: For testing, although the inputs |A| and N are restricted within a small range, your implementation however must be generalizable to any values (≥ 1) of those parameters. Strictly follow the following specification to address this question:
+
+Program name: q1.py
+
+Arguments to your program: Two integers: (i) alphabet size ≥ 1 (during testing, enter a value in the range [1, 5]) (ii) string length ≥ 1 (during testing, enter a value in the range [1, 10]).
+
+Command line usage of your script: python q1.py
+
+Output to the terminal the following statistics in a single line, space separated (i) The number of strings of length N from alphabet A with ≥ 2 distinct cyclic rotations. (ii) The number of strings of length N from alphabet A with exactly N distinct cyclic rotations. (iii) The number of strings of length N from alphabet A with exactly 1 distinct cyclic rotation. (iv) Is the number of strings with ≥ 2 distinct cyclic rotations an integer multiple of N? If yes, print true, else print false.
+
+Question 2: B-tree of distinct words [5 Marks]
+
+In this question you will be writing a program that implements an in-memory1 construction of a B-tree data structure, with supporting operations that you have learnt in your lecture (Week 9). Your program takes three arguments:
+
+Minimum degree parameter t ≥ 2 of the B-tree. (Only exemption to this minimum degree is the root node.)
+An input text file (dictionary.txt) containing a list of distinct words in some random order. All words in this file are strings of ASCII characters, in one-word-per-line format (see example below).
+Another input file (commands.txt) specifying a sequence of either insert or delete commands, which need to be applied on the constructed B-tree. (See example below.)
+That is, starting from the B-tree constructed on words in the input dictionary.txt, these commands should be carried out on the current state of the B-tree, executed one-by-one in sequence they appear in commands.txt. Note, if any command asks you to either insert that is already in a B-tree or delete not in the B-tree, your program should recognize these events and ignore them, by searching for that word in the current state of the B-tree (before deciding to execute any specified command.) After executing the commands, your program has to traverse the final state of the B-tree and output the sorted list of words contained in the B-tree (one word per line; see example below).
+
+Strictly follow the specification below to address this question:
+
+Program name: q2.py Arguments to your program: As enumerated above, the inputs are:
+
+t (minimum B-tree node degree parameter)
+dictionary.txt (containing list of distinct words (ASCII strings) in some random order, one per line; see example below).
+commands.txt (sequence of insert/delete commands, one command per line; see example below).
+Command line usage of your script: python q2.py <dictionary.txt> <commands.txt>
+
+Output file name: output q2.txt (containing sorted words derived by traversing the B-tree) Important: The sorted order of words is based on ASCII values of characters within those words/strings. Internally, when constructing the B-tree, you will have to maintain the B-tree’s search order on the same criterion.

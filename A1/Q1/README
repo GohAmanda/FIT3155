@@ -1,5 +1,5 @@
-pattern.txt: input pattern that we want to look for in the text
-text.txt: input text that we want to find the pattern from 
+pattern.txt: the string corresponding to pat[1..m]
+text.txt: the string corresponding to txt[1...n]
 q1.py: my solutions to solve question 1
 output_q1.txt: the output of my code will be outputted in a txt file, expecting the matching index to be shown 
               in decreasing formation, each index line by line largest to smallest

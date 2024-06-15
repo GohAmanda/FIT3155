@@ -1,1 +1,9 @@
+dictionary.txt: containing a list of distinct words in some random
+order. All words in this file are strings of ASCII characters, in one-word-per-line format
 
+commands.txt: specifying a sequence of either insert <someword>
+or delete <someword> commands, which need to be applied on the constructed B-tree.
+
+q2.py: solution to insert or delete a distinct word in/from the dictionary.txt based on the commands.txt
+
+output_q2.py: Output list will show the remaining distinct words after deleting or inserting words

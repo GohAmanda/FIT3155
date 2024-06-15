@@ -1,1 +1,6 @@
-
+string.txt: containing input string str[1 . . . n].
+q2_encoder.py: solutions for encoding the input string.
+q2_encoder_output.bin: The output is a binary stream of bits concatenating component.
+codewords for all pieces of information enumerate in the previous page.
+q2_decoder.py: solutions for decoding the encoded output  to get the original string.
+q2_decoder_output.txt: The output should be the same as the input string.
